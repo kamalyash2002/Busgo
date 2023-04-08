@@ -1,0 +1,90 @@
+table.desc tr,td{
+	border-bottom: 1px solid #ddd;
+	width: 40%;
+}
+table.desc tr:nth-child(even) {background-color: #ffb6c1;} 
+
+table.desc th {
+	background-color: #ff1493;
+	color: white;
+	padding: 30px;
+} 
+
+h2{
+	background-image: url("bg.png");
+	color: white;
+	height: 50px;
+	text-align: center;
+	font-size:30px;
+	border-radius: 10px
+}
+
+
+
+
+
+
+
+
+
+
+.ab {
+	width: 20%;
+	height: 70px;
+	boder: none;
+	background-color: #8B0000;
+	padding: 10px 28px;
+	font-size: 30px;
+	font-weight: normal;
+	cusrsor: pointer;
+	text-align: center;
+	border-radius: 10px;
+	border: 1px solid #FF4500;
+	box-shadow: 0 10px 10px 0;
+	margin-left: 50px;
+}
+
+
+
+.db {
+	width: 25%;
+	height: 70px;
+	boder: none;
+	background-color: #C71585;
+	padding: 10px 28px;
+	font-size: 30px;
+	font-weight: normal;
+	cusrsor: pointer;
+	text-align: center;
+	border-radius: 10px;
+	border: 1px solid #FF00FF;
+	box-shadow: 0 10px 10px 0;
+	margin-left: 50px;
+}
+
+
+
+
+.bp {
+	width: 25%;
+	height: 70px;
+	boder: none;
+	background-color: #1E90FF;
+	padding: 10px 28px;
+	font-size: 30px;
+	font-weight: normal;
+	cusrsor: pointer;
+	text-align: center;
+	border-radius: 10px;
+	border: 1px solid #FF00FF;
+	box-shadow: 0 10px 10px 0;
+	margin-left: 50px;
+}
+
+
+
+
+
+
+
+

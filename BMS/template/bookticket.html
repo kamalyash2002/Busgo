@@ -1,0 +1,199 @@
+﻿{% load static%}
+{% static "" as baseurl %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+     <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+   
+<link rel="shortcut icon" type="image/x-icon" href="{{baseurl}}bt/img/favicon.png">
+   <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+   
+<link rel="stylesheet" href="{{baseurl}}bt/css/bootstrap.min.css">
+   
+   <link rel="stylesheet" href="{{baseurl}}bt/css/themify-icons.css">    
+<link rel="stylesheet" href="{{baseurl}}bt/css/style.css">
+ 
+<link rel="stylesheet" href="{{baseurl}}bt/css/table.css">
+  
+</head>
+
+
+<body>
+   
+<!--[if lte IE 9]>
+            
+!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+          
+      <div class="container-fluid p-0">
+                
+    <div class="row align-items-center no-gutters">
+                    
+    <div class="col-xl-2 col-lg-2">
+                    
+                                </div>
+                        <div class="col-xl-7 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+               <li><a href="#">Contact Us<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a>Yash  +918445349293</a></li>
+                                                <li><a>Shashwat  +918273999473</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"></a>
+                                            <ul class="submenu">
+                                                <li><a href="#">elements</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"></a></li>
+                                        
+
+<li></li>                                        <li><a href="{% url 'about_us' %}">About Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="log_chat_area d-flex align-items-center">
+                                                               </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- bradcam_area_start -->
+    <div class="bradcam_area breadcam_bg overlay2">
+        <h3>Book<br>Tickets</h3>
+    </div>
+    <!-- bradcam_area_end -->
+    <div class="about_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+  
+<form action='search'>
+<table class="c">
+<tr>
+<td><input type="text" name="f" placeholder="From*" value="{{l.0}}" required></td>
+<td><input type="text" name="t" placeholder="To*" value="{{l.1}}" required></td>
+</tr>
+<tr>
+<td>Date</td>
+<td><input type="date" name="date" paceholder="Date" value="{{l.2}}" required></td>
+</tr>
+<tr>
+<td colspan=2><center><input type="submit" value="Show Buses"></center></td>
+</tr>
+</table>
+<br><br><br>
+</form>
+<center>
+<table class="na">
+{% if na %}
+<tr>
+</tr>
+<tr>
+<td colspan=2><center>{{na}}</center></td>
+</tr>
+<tr>
+<td colspan=2>
+<form action="profile">
+<center><input type="submit" value="Back to profile" name="profile"></center>
+</form>
+</td>
+</tr>
+{% endif %}
+</table>
+</center>
+<br><br><br><br>
+{% if info %}
+<center><h3><font color="Navy">Buses Available</font></h3></center>
+<br>
+<form action="book">
+<table class="Tic">
+<tr>
+<th><center>Bus Number</center></th>
+<th><center>Type</center></th>
+<th><center>Number of Seats</center></th>
+<th><center>Fare</center></th>
+<th><center>Time of departure</center></th>
+<th><center>Availability</center></th>
+</tr>
+{% for a,b,c,d,e in info %}
+<tr>
+<td><center>{{a}}</center></td>
+<td><center>{{b}}</center></td>
+<td><center>{{c}}</center></td>
+<td><center>{{d}}</center></td>
+<td><center>{{e}}</center></td>
+<td><a href="cav?bid={{a}}"><u>Check Availability</u></a></td>
+</tr>
+{% endfor %}
+</table>
+{% endif %}
+<br><br><br><br><br><br>
+{% if show %}
+<center><h3>Seats Availability</h3></center>
+<br><br>
+<center>
+<font color="white">
+<table width="60%" class="sb">
+<tr>
+<th width="30%"><center>Seats Booked</center></th>
+<td width="30%">
+{% if seats %}
+{% for i in seats %}
+{{i}} &nbsp;
+{% endfor %}
+{% else %}
+{{yo}}
+{% endif %}
+</td>
+</tr>
+</table>
+</font>
+</center>
+<br>
+{% if s %}
+<center>
+<table width="60%">
+<tr>
+<td width="30%"><center>Seat Numbers</center></td>
+<td width="30%"><input type="text" name="seats"  placeholder="Enter Seats Number between (1-{{s}})" size="35" required>
+</td>
+</tr>
+<tr>
+<td colspan=2>
+<form action="book">
+<center><input type="submit" value="Book"></center>
+</form>
+</td>
+</tr>
+<tr><td colspan=2><center>{{w}}</center></td></tr>
+</table>
+</center>
+{% endif %}
+{% endif %}
+<br><br><br><br><br><br><br><br><br><br><br><br><br> 
+<h2>Copyright ©2019 Busgo.in | All rights reserved</h2>  
+</body>
+</html>

@@ -1,0 +1,15 @@
+.info { 
+  margin-left: 400px;
+  margin-right: 400px
+}
+
+h2 {
+  background-image: url("bg.png");
+  color: white;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px
+}
+
+ 

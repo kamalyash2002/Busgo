@@ -1,0 +1,30 @@
+table.table1 {
+  width: 60%;
+  font-size: 20px;
+}
+table.table1 tr,td {
+  padding: 80px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+} 
+
+table.table2 {
+  box-shadow: 0 8px 16px 0;
+  width: 40%;
+  height: 20px;
+}
+
+table.table2 th, td {
+  border-bottom: none;
+  padding: 20px;
+  text-align: center;
+} 
+
+h2 {
+  background-image: url("bg.png");
+  color: white;
+  height: 50px;
+  text-align: center;
+  font-size:30px;
+  border-radius: 10px
+}

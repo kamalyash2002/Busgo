@@ -1,0 +1,191 @@
+﻿{% load static%}
+{% static "" as baseurl %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+   
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+   
+<link rel="shortcut icon" type="image/x-icon" href="{{baseurl}}bank/img/favicon.png">
+   <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+   
+<link rel="stylesheet" href="{{baseurl}}bank/css/bootstrap.min.css">
+ <link rel="stylesheet" href="{{baseurl}}bank/css/themify-icons.css">
+    <link rel="stylesheet" href="{{baseurl}}bank/css/style.css">
+  
+<link rel="stylesheet" href="{{baseurl}}bank/css/table.css">
+
+</head>
+
+
+<body>
+   
+<!--[if lte IE 9]>
+            
+!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+          
+      <div class="container-fluid p-0">
+                
+    <div class="row align-items-center no-gutters">
+                    
+    <div class="col-xl-2 col-lg-2">
+                    
+                                </div>
+                        <div class="col-xl-7 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+               <li><a href="#">Contact Us<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a>Yash  +918445349293</a></li>
+                                                <li><a>Shashwat  +918273999473</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"></a>
+                                            <ul class="submenu">
+                                                <li><a href="#">elements</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"></a></li>
+                                        
+
+<li></li>                                        <li><a href="{% url 'about_us' %}">About Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="log_chat_area d-flex align-items-center">
+                                                               </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- bradcam_area_start -->
+    <div class="bradcam_area breadcam_bg overlay2">
+        <h3>Bank Management</h3>
+    </div>
+    <!-- bradcam_area_end -->
+    <div class="about_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+  
+
+
+<center>
+<form action="addacc">
+<button type="submit" class="ab"><font color="white">Add Account</font></button>
+</form>
+<br><br>
+{% if info3 %}
+<form action="addaccount" method="POST">
+{%csrf_token%}
+<table>
+<tr>
+<td>Account Number</td>
+<td><input type="text" name="accno"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="p"></td>
+</tr>
+<tr>
+<td>Amount</td>
+<td><input type="text" name="amt"></td>
+</tr>
+<tr>
+<td colspan=2><center><input type="submit" value="Add"></center></td>
+</tr>
+</table>
+</form>
+{% endif %}
+<br><br>
+<form action="delacc">
+<button type="submit" class="db"><font color="white">Edit/Delete Account</font></button>
+</form>
+<br><br>
+{% if nb %}
+<br>
+{{nb}}
+<br>
+{% endif %}
+
+{% if info4 %}
+<table class="desc" width="60%">
+<tr>
+<th width="20%"><center>Account Number</center></th>
+<th width="20%"><center>Amount</center></th>
+<th width="20%"><center>Delete/Edit</center></th>
+</tr>
+{% for a,b in info4 %}
+<tr>
+<td><center>{{a}}</center></td>
+<td><center>{{b}}</center></td>
+<td>
+<center><u><a href="deleteacc?ano={{a}}">Delete</a></u>/
+<u><a href="editacc?ano={{a}}">Edit</a></u></center>
+</td>
+</tr>
+{% endfor %}
+</table>
+{% endif %}
+<br>
+
+
+
+{% if d %}
+<center>
+<form action="editaccount" method="POST">
+{%csrf_token%}
+<table>
+<tr>
+<td>Account Number</td>
+<td><input type="text" name="accno" value="{{d.0}}" readonly></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="p" value="{{d.2}}"></td>
+</tr>
+<tr>
+<td>Amount</td>
+<td><input type="text" name="amt" value="{{d.1}}"></td>
+</tr>
+<tr>
+<td colspan=2><center><input type="submit" value="Edit"></center></td>
+</tr>
+</table>
+</form>
+</center>
+{% endif %}
+<br>
+<form action="aprofile">
+<button type="submit" class="bp"><font color="white">Back to Profile</font></button>
+</form>
+</center>
+<br><br><br><br>
+<h2><center>Copyright ©2019 Busgo.in | All rights reserved</center></h2>  
+
+</body>
+
+
+</html>

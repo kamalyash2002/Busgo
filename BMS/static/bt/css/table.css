@@ -1,0 +1,47 @@
+table.c{
+  	width: 50%;
+	height: 400px;
+	border-radius: 25px;
+	border: Tomato;
+	margin-left: 250px;
+	border: none
+}
+
+table.c tr,td{
+	padding: 40px;
+	border-bottom: 1px solid #ddd;
+}
+
+table.Tic tr,td{
+	border-bottom: 1px solid #ddd;
+	width: 50%;
+}
+table.Tic tr:nth-child(even) {background-color: #add8e6;} 
+
+table.Tic th {
+	background-color: #0000cd;
+	color: white;
+	padding: 50px;
+} 
+table.na {
+border: none
+}
+table.na tr,td {
+	border-bottom: none;
+}
+h2{
+	background-image:url("bg.png");
+	color: white;
+	height: 50px;
+	text-align: center;
+	font-size:30px;
+	border-radius: 10px
+}
+
+
+table.sb td{
+	background-color: #DE0066;
+}
+table.sb th{
+	background-color: #0000aa;
+}

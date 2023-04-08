@@ -1,0 +1,128 @@
+﻿{% load static%}
+{% static "" as baseurl %}
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- Head -->
+
+<head>
+    
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Key Login Form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta-Tags -->
+    <!-- Index-Page-CSS -->
+    <link rel="stylesheet" href="{{baseurl}}Home/css/style.css" type="text/css" media="all">
+    <!-- //Custom-Stylesheet-Links -->
+    <!--fonts -->
+    <!-- //fonts -->
+    <link rel="stylesheet" href="{{baseurl}}Home/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" href="{{baseurl}}Home/css/drop.css" type="text/css">
+<script src="{{baseurl}}Home/js/d.js"></script>
+    <!-- //Font-Awesome-File-Links -->
+	
+	<!-- Google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
+	<!-- Google fonts -->
+
+</head>
+<!-- //Head -->
+<!-- Body -->
+
+<body>
+
+<section class="main">
+	<div class="layer">
+		<div class="links">
+				<ul class="links-unordered-list">
+					<li class="active">
+						<a href="{% url 'about_us' %}">About Us</a>
+					</li>
+					<li class="">
+						</li>
+					<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Contact Us</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Yash  +918445349293</a>
+    <a href="#">Shashwat  +918273999473</a>
+  </div>
+</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="content-w3ls">
+			<div class="text-center icon">
+				<span><font size="7" color="white" face="Vivaldi">Busgo.in</font><br><font size="5" color="white" face="Bradley Hand ITC">India's Leading Bus service provider...</font></span>
+			</div>
+			<div class="content-bottom">
+				<form action="login" method="post">
+				{% csrf_token %}
+					<div class="field-group">
+						<span class="fa fa-user" aria-hidden="true"></span>
+						<div class="wthree-field">
+							<input name="id" id="text1" type="text" value="" placeholder="Username" required>
+						</div>
+					</div>
+					<div class="field-group">
+						<span class="fa fa-lock" aria-hidden="true"></span>
+						<div class="wthree-field">
+							<input name="pass" id="myInput" type="password" placeholder="Password">
+						</div>
+					</div>
+<center><p style="color:white;">{{err}}</p></center>
+<br><br>
+					<div class="wthree-field">
+						<button type="submit" class="btn">Get Started</button>
+					</div>
+					<ul class="list-login">
+						<li class="switch-agileits">
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+								keep Logged in
+							</label>
+						</li>
+						<li>
+							<a href="{% url 'forpass' %}" class="text-right">forgot password?</a>
+						</li>
+						<li class="clearfix"></li>
+					</ul>
+					<ul class="list-login-bottom">
+						<li class="">
+		   <font color="white" size="3">New to the site? <a href="{% url 'signup' %}" class=""><u>Create Account</u></a>   here...</font>
+						</li>
+				
+						</li>
+						<li class="clearfix"></li>
+					</ul>
+				</form>
+			</div>
+		</div>
+		<div class="bottom-grid1">
+			<div class="links">
+				<ul class="links-unordered-list">
+					
+				</ul>
+			</div>
+			<div class="copyright">
+				<p>Copyright ©2019 Busgo.in | All rights reserved
+				</p>
+			</div>
+		</div>
+    </div>
+</section>
+
+</body>
+<!-- //Body -->
+</html>

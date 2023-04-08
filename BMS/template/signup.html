@@ -1,0 +1,117 @@
+{% load static%}
+{% static "" as baseurl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Home Loan Application Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Meta tag Keywords -->
+<!-- css files -->
+<link rel="stylesheet" href="{{baseurl}}signup/css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
+<link rel="stylesheet" href="{{baseurl}}signup/css/jquery-ui.css" />
+<!-- //css files -->
+<!-- web-fonts -->
+<link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=GFS+Neohellenic:400,400i,700,700i&amp;subset=greek" rel="stylesheet">
+<!-- //web-fonts -->
+</head>
+<body>
+	<div class="center-container">
+		<!--header-->
+		<div class="header-w3l">
+			<h1><font family="Arial"><b>Sign Up</b></font></h1>
+		</div>
+		<!--//header-->
+		<!--main-->
+	<div class="agileits-register">
+		<form action="Sign" method="post">
+		{% csrf_token %}
+				<div class="w3_modal_body_grid w3_modal_body_grid1">
+					<span>Name :</span>
+					<input type="text" name="name" placeholder="Your Name" required=""/>
+					<div class="clear"> </div>
+				</div>
+				<div class="w3_modal_body_grid">
+					<span>Email :</span>
+					<input type="email" name="id" placeholder="Your E-mail" required=""/>
+					<div class="clear"> </div>
+				</div>
+				<div class="w3_modal_body_grid w3_modal_body_grid1">
+					<span>Phone Number :</span>
+					<input type="text" name="Phno" placeholder="Your Phone Number" required=""/>
+					<div class="clear"> </div>
+				</div>
+				<div class="w3_modal_body_grid w3_modal_body_grid1">
+					<span>Address :</span>
+					<input type="text" name="address" placeholder="Address">
+					<div class="clear"> </div>
+				</div>
+				<div class="w3_modal_body_grid w3_modal_body_grid1">
+					
+					<input type="text" name="address" placeholder="Street">
+					<div class="clear"> </div>
+				</div>
+				<div class="w3_modal_body_grid w3_modal_body_grid1">
+					
+					<input type="text" name="address" placeholder="City">
+					<div class="clear"> </div>
+				</div>
+				<div class="w3_modal_body_grid w3_modal_body_grid1">
+					
+					<input type="text" name="address" placeholder="ZipCode">
+					<div class="clear"> </div>
+				</div>
+				
+				<div class="w3_modal_body_grid">
+					<span>Details For :</span>
+					<select id="w3_country" onchange="change_country(this.value)" class="frm-field">
+						<option value="null">Select</option>
+						<option value="null">Primary Residence</option>   
+						<option value="null">Secondary Residence</option>   
+					  						
+					</select>
+					<div class="clear"> </div>
+				</div>
+				<div class="w3_modal_body_grid w3_modal_body_grid1">
+					<span>Password :</span>
+					<input class="date" name="pass" type="password" placeholder="Enter Password">
+					<div class="clear"> </div>
+				</div>
+				<div class="w3_modal_body_grid">
+				
+					<h4>GENDER:</h4>
+					
+						<div class="colr ert">
+							<label class="radio"><input type="radio" name="Gender" value="M"><i></i>Male</label>
+						
+						<div class="colr">
+							<label class="radio"><input type="radio" name="Gender" value="F"><i></i>Female</label>
+						</div>
+						<div class="clear"> </div>
+					
+					<div class="clear"> </div>
+				</div>
+				
+				<div class="w3_modal_body_grid">
+				
+				<input type="submit" value="Sign Up" />
+				<div class="clear"></div>
+			</form>
+		</div>
+		
+		<!--//main-->
+		
+	</div>
+	<!--footer-->
+		<div class="footer">
+			<h2>Copyright 2019 Busgo.in | All rights reserved</h2>
+		</div>
+		<!--//footer-->
+		
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+table.desc tr,td{
+	border-bottom: 1px solid #ddd;
+	width: 50%;
+}
+table.desc tr:nth-child(even) {background-color: #9ACD32;} 
+
+table.desc th {
+	background-color: #228B22;
+	color: white;
+	padding: 20px;
+}
+
+table.table2 tr,td{
+	border-bottom:none;
+	width: 55%; 
+}
+h2{
+	background-image: url("bg.png");
+	color: white;
+	height: 50px;
+	text-align: center;
+	font-size:30px;
+	border-radius: 10px
+}
